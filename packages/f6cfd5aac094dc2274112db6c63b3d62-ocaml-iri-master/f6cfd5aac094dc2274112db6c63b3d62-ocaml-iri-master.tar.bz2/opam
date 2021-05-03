@@ -1,0 +1,27 @@
+opam-version: "2.0"
+synopsis: "Implementation of Internationalized Resource Identifiers (IRIs)"
+maintainer: "Zoggy <zoggy@bat8.org>"
+authors: "Zoggy <zoggy@bat8.org>"
+license: "GNU Lesser General Public License version 3"
+tags: ["web" "iri" "rfc3987"]
+homepage: "https://framagit.org/zoggy/ocaml-iri"
+bug-reports: "https://framagit.org/zoggy/ocaml-iri/-/issues"
+depends: [
+  "ocaml" {>= "4.12.0"}
+  "ocamlfind"
+  "sedlex" {>= "2.3"}
+  "uutf" {>= "1.0.0"}
+  "uunf" {>= "2.0.0"}
+]
+build: [make "all"]
+install: [make "install"]
+remove: ["ocamlfind" "remove" "iri"]
+dev-repo: "git+https://framagit.org/zoggy/ocaml-iri.git"
+url {
+  src:
+    "https://framagit.org/zoggy/ocaml-iri/-/archive/master/ocaml-iri-master.tar.bz2"
+  checksum: [
+    "md5=12a8a5abc78380c3db6c480805982483"
+    "sha512=37eed42dedbd29c6a58f1c2b25e5ffe39854e4ccd3b41acf77d5a603fe88446c52a1733e0aaee8a0542c48327eafe0c22dc9fbc9f6111d6df274b083dfdaef16"
+  ]
+}
